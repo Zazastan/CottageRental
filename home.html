@@ -1,0 +1,23 @@
+<div class="container-fluid">
+<div>
+Hae mökkejä Pirkanmaan alueelta!<br>
+
+</div>
+
+<form class="form-inline" role="form" ng-submit="search()">
+	<div class="form-group">
+		<label for="startDate">Alkupäivämäärä</label>
+		<input type="date" class="form-control" ng-model="data.startDate" min="{{data.today | date: 'yyyy-MM-dd'}}" required>
+	</div>
+	<br>
+	<div class="form-group">
+		<label for="endDate">Loppupäivämäärä:</label>
+		<input ng-disabled="data.startDate === undefined" type="date" class="form-control" min="{{data.startDate | date: 'yyyy-MM-dd'}}" ng-model="data.endDate" required>
+	</div>
+	<br>
+	<button type="submit" class="btn btn-primary" style="margin-top:5px;">Hae</button>
+</form>
+
+</div>
+
+

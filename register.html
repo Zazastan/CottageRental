@@ -1,0 +1,36 @@
+<style>
+	.register{
+		padding-left:2%;
+		padding-right:2%;
+	}
+</style>
+	<form role="form" ng-submit="register()">
+		<div class="form-group register" >
+			<label for="usr">Käyttäjänimi:</label>
+			<input type="text" class="form-control" ng-model="data.username" required>
+		</div>
+		<div class="form-group register">
+			<label for="pwd">Salasana:</label>
+			<input type="password" class="form-control" ng-model="data.password" required>
+		</div>
+		<div class="form-group register">
+			<label for="pwd">Salasana uudelleen:</label>
+			<input type="password" class="form-control" ng-model="data.passwordCheck" required>
+		</div>
+		
+		<div class="form-group register">
+			<label for="usr">Etunimi:</label>
+			<input type="text" class="form-control" ng-model="data.firstName" required>
+		</div>
+		<div class="form-group register">
+			<label for="usr">Sukunimi:</label>
+			<input type="text" class="form-control" ng-model="data.lastName" required>
+		</div>
+		
+		<div class="form-group register">
+			<label for="usr">Email:</label>
+			<input type="email" class="form-control" ng-model="data.email" required>
+		</div>
+		
+		<button type="submit" class="btn btn-primary" style="margin-top:5px;">Kirjaudu sisään</button>
+	</form>

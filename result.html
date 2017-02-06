@@ -1,0 +1,14 @@
+<div class="container-fluid">
+	<div class="row">
+		<div ng-repeat="cottage in cottages" class="thumbnail col-sm-6 col-md-4" style="padding:10px">
+			<img src="metsa_2.jpeg" alt="...">
+			<h3>{{cottage.name}}</h3>
+			<div>Hinta: {{cottage.cost}}€/päivä</div>
+			<div>{{cottage.description}}</div>
+			<div>{{cottage.address}}</div>
+			<button type="button" class="btn btn-primary" ng-click="order(cottage)" style="margin-top:5px;">Vuokraa</button>
+		</div>
+		
+	</div>
+</div>
+

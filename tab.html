@@ -1,0 +1,21 @@
+<nav class="navbar navbar-default">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<a class="navbar-brand" ng-click="home()">Mökkivuokraamo</a>
+		</div>
+		<ul class="nav navbar-nav navbar">
+			<li><a ng-click="info()">Info</a></li>
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+			<li ng-hide="logged"><a ng-click="register()"><span class="glyphicon glyphicon-user"></span> Rekisteröiy</a></li>
+			<li ng-hide="logged"><a uib-popover-template="'loginPopover.html'" popover-placement="bottom" popover-trigger="'outsideClick'"><span class="glyphicon glyphicon-log-in"></span> Kirjaudu sisään</a></li>
+			<li ng-show="logged"><a uib-popover-template="'userPopover.html'" popover-placement="bottom" popover-trigger="'outsideClick'"><span class="glyphicon glyphicon-user"></span> {{user.username}}</a></li>
+				
+	
+		</ul>
+	</div>
+</nav>
+
+<div ui-view="loput" style="height:80%; width:100%; background-color:#ffffff;"></div>
+
+
